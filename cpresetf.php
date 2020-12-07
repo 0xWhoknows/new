@@ -1,5 +1,5 @@
 <?php
-// Mister Spy SymlinkerV2 Project , Thank You
+//  Thank You
 set_time_limit(0);
 error_reporting(0);
 
